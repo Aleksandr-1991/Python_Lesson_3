@@ -1,0 +1,12 @@
+print("\033[H\033[J", end="")
+
+def fib(n):
+    if n in [1,2]:  # Базис.  Он же "точка выхода".
+        return 1
+    return fib(n-1) + fib(n-2)
+
+list_1 = []
+for i in range(1, 10):
+    list_1.append(fib(i))
+
+print(list_1)
